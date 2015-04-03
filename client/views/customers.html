@@ -14,7 +14,9 @@
   {{/if}}
   <ul>
     {{#each customers}}
-      <li>{{shipto}} - {{name}} - <a class="delete" href="#">[x]</a></li>
+      <!-- now we have a seperate customer template to handle the template
+        <li>{{shipto}} - {{name}} - <a class="delete" href="#">[x]</a></li>-->
+      {{> customer}}
     {{/each}}
   </ul>
 </template>

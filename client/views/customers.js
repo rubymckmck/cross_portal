@@ -45,6 +45,7 @@ Template.customers.events({
             name: tpl.find("#name").value,
             shipto: tpl.find("#shipto").value
         };
+      //console.log(this);
   
     // add the customer to the db
         Meteor.call(
@@ -60,9 +61,5 @@ Template.customers.events({
        );    
   },//end submit form.create-customer
   
-  'click a.delete': function(e, tpl){
-    e.preventDefault();
-    // var _id = ?;
-    Customers.remove(this._id);
-  }
+  
 });

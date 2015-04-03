@@ -1,0 +1,17 @@
+<!--This is a customer template as oppose the customers template-->
+<template name="customer">
+  <li>
+    {{#if isEditingCustomer}}
+      <form class="form-edit"> 
+        <input name="shipto" type="text" value="{{shipto}}" id="shipto">
+        <input name="name" type="text" value="{{name}}" id="name">
+        <button type="submit">Submit</button>
+        <a class="cancel" href="#">Cancel</a>
+      </form>
+    {{else}}
+      {{shipto}} - {{name}} -
+      <a href="#" class="edit">edit</a> - 
+      <a href="#" class="remove"> (x)</a>
+    {{/if}}
+  </li>
+</template>
